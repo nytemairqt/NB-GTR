@@ -382,10 +382,10 @@ const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 120, lblAm
 const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 120, lblAmp.get("y") + 30, 48, 48, "AmpLFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 120, lblAmp.get("y") + 30, 48, 48, "AmpRand", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 120, lblPitch.get("y") + 30, 48, 48, "PitchVel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced", true);
-const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchDec", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced", true);
-const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchLFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
-const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchRand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 120, lblPitch.get("y") + 30, 48, 48, "PitchVel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.15, "pnlAdvanced", true);
+const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchDec", true, onknbPitchDecayControl, 20, 4000, 1.0, 1500, "pnlAdvanced", true);
+const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchLFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced", true);
+const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchRand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced", true);
 
 const knbToneBody = createKnob("knbToneBody", lblTone.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneBody", true, onknbToneBodyControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
 const knbToneBite = createKnob("knbToneBite", knbToneBody.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBite", true, onknbToneBiteControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
