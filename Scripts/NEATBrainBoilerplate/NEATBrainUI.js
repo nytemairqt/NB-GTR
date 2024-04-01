@@ -127,17 +127,17 @@ inline function onbtnShowWGProfileCustomControl(component, value)
 }
 
 // Connect Custom Profile
-const wgProfileWatcher = Engine.createBroadcaster({"component" : "fltWGProfileCustom", "event" : "All Callbacks"});
-wgProfileWatcher.attachToComponentMouseEvents("fltWGProfileCustom", "All Callbacks", {"id" : "wgProfileWatcher"});
-wgProfileWatcher.addListener("RefreshFunction", {"id" : "wgProfileWatcher"}, function(component, event)
-{
-	if (event.mouseUp)
-	{
-		var state = leftWG_fxProfileCustom.exportState();
-		rightWG_fxProfileCustom.restoreState(state);
-	}	
-});
 
+const wgProfileWatcher = Engine.createBroadcaster({"component" : "fltWGProfileCustom", "event" : "All Callbacks"});
+
+wgProfileWatcher.attachToEqEvents("leftWG_fxProfileCustom", ["BandAdded", "BandRemoved", "BandSelected"], {"id" : wgProfileWatcher});
+wgProfileWatcher.attachToComponentMouseEvents("fltWGProfileCustom", "All Callbacks", {"id" : "wgProfileWatcher"});
+
+wgProfileWatcher.addListener("", "update something", function(component, value)
+{
+	var state = leftWG_fxProfileCustom.exportState();
+	rightWG_fxProfileCustom.restoreState(state);
+});
 
 
 // Create UI Elements
@@ -275,19 +275,18 @@ inline function onbtnShowRSProfileCustomControl(component, value)
 {
 	pnlRSProfileCustom.set("visible", value);
 	local state = leftRS_fxProfileCustom.exportState();
-	rightRS_fxProfileCustom.restoreState(state);
+	rightRS_fxProfileCustom.restoreState(state);	
 }
 
 // Connect Custom Profile
 const rsProfileWatcher = Engine.createBroadcaster({"component" : "fltRSProfileCustom", "event" : "All Callbacks"});
+
+rsProfileWatcher.attachToEqEvents("leftRS_fxProfileCustom", ["BandAdded", "BandRemoved", "BandSelected"], {"id" : rsProfileWatcher});
 rsProfileWatcher.attachToComponentMouseEvents("fltRSProfileCustom", "All Callbacks", {"id" : "rsProfileWatcher"});
-rsProfileWatcher.addListener("RefreshFunction", {"id" : "rsProfileWatcher"}, function(component, event)
+rsProfileWatcher.addListener("", "update something", function(component, value)
 {
-	if (event.mouseUp)
-	{
-		var state = leftRS_fxProfileCustom.exportState();
-		rightRS_fxProfileCustom.restoreState(state);
-	}	
+	var state = leftRS_fxProfileCustom.exportState();
+	rightRS_fxProfileCustom.restoreState(state);
 });
 
 // Create UI Elements
