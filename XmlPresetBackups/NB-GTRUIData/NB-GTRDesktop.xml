@@ -169,7 +169,7 @@
                    itemColour2="855638016" Data="{&#10;  &quot;ProcessorId&quot;: &quot;leftRS_fxProfileCustom&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
       </Component>
       <Component type="ScriptPanel" id="pnlAdvanced" x="496" y="0" width="500"
-                 height="522" parentComponent="pnlBody" visible="0.0">
+                 height="522" parentComponent="pnlBody" visible="0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-11" y="16" width="128"
                    height="64" text="ADVANCED" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblTone" x="-29" y="402" width="128" height="32"
@@ -186,10 +186,10 @@
                    min="20" max="4000" stepSize="1.0" isPluginParameter="1" pluginParameterName="PitchDec"
                    tooltip="Decay time for the Velocity Pitch-Bend."/>
         <Component type="ScriptSlider" id="knbPitchRandom" x="391" y="292" text="PitchRand"
-                   defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
+                   defaultValue="0.05000000074505806" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="PitchRand" tooltip="Per-voice Pitch Randomization."/>
         <Component type="ScriptSlider" id="knbPitchLFO" x="291" y="292" text="PitchLFO"
-                   defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
+                   defaultValue="0.05000000074505806" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="PitchLFO" tooltip="Subtle Pitch Drift over time."/>
         <Component type="ScriptSlider" id="knbAmpVelocity" x="91" y="152" text="AmpVel"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
